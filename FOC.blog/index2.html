@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Degree Programmes - Faculty of Computing | SUSL</title>
+    <link rel="stylesheet" href="style.css"> <!-- same CSS as home page -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        .degrees-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+            padding: 0 2rem;
+        }
+        .degree-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .degree-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(130, 0, 255, 0.2);
+        }
+        .degree-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #bb86fc;
+        }
+        .duration {
+            color: #03dac6;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+        .degree-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .degree-card ul li {
+            margin: 0.8rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .degree-card ul li::before {
+            content: "▹";
+            color: #bb86fc;
+            position: absolute;
+            left: 0;
+        }
+        .back-home {
+            display: inline-block;
+            margin: 3rem 0;
+            color: #bb86fc;
+            text-decoration: none;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <img class="image-gradient" src="gradient.png" alt="gradient">
+    <div class="layer-blur"></div>
+
+    <div class="container">
+        <header>
+            <h1 data-aos="fade-down" data-aos-duration="1500" class="logo">SUSL</h1>
+            <nav>
+                <a data-aos="fade-down" data-aos-duration="1500" href="index.html">HOME</a>
+                <a data-aos="fade-down" data-aos-duration="2000" href="https://vle.sab.ac.lk/" target="_blank">LMS</a>
+                <a data-aos="fade-down" data-aos-duration="2500" href="#">ACADEMIC</a>
+                <a data-aos="fade-down" data-aos-duration="3000" href="#">CONTACT</a>
+            </nav>
+            <div data-aos="fade-down" data-aos-duration="1500" class="button btn-signing">SIGNING</div>
+        </header>
+
+        <main style="min-height: calc(100vh - 6rem); display: flex; flex-direction: column; justify-content: center;">
+            <div class="content" style="margin-left: 10%;">
+                <h1 data-aos="fade-up" data-aos-duration="1500" style="font-size: 4rem; margin-bottom: 1rem;">
+                    Degree Programmes
+                </h1>
+                <p data-aos="fade-up" data-aos-delay="300" style="font-size: 1.4rem; max-width: 50rem; color: #aaa;">
+                    Faculty of Computing – Sabaragamuwa University of Sri Lanka
+                </p>
+            </div>
+
+            <div class="degrees-grid">
+                <!-- Degree 1 -->
+                <div class="degree-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="degree-title">BSc (Hons) in Information Systems</h3>
+                    <p class="duration">4 Years Full-Time</p>
+                    <ul>
+                        <li>Focuses on business processes + IT solutions</li>
+                        <li>Enterprise Systems, ERP, Business Intelligence</li>
+                        <li>IT Project Management & Consultancy</li>
+                        <li>Cybersecurity for Business</li>
+                        <li>Data Analytics & Decision Support Systems</li>
+                        <li>Industry internship in final year</li>
+                    </ul>
+                </div>
+
+                <!-- Degree 2 -->
+                <div class="degree-card" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="degree-title">BSc (Hons) in Software Engineering</h3>
+                    <p class="duration">4 Years Full-Time</p>
+                    <ul>
+                        <li>Software design patterns & architecture</li>
+                        <li>DevOps, Agile & Scrum methodologies</li>
+                        <li>Cloud-native development (AWS/Azure)</li>
+                        <li>Mobile & Web application development</li>
+                        <li>Software testing, quality & security</li>
+                        <li>Final-year individual/group project with industry</li>
+                    </ul>
+                </div>
+
+                <!-- Degree 3 -->
+                <div class="degree-card" data-aos="fade-up" data-aos-delay="500">
+                    <h3 class="degree-title">BSc (Hons) in Data Science</h3>
+                    <p class="duration">4 Years Full-Time</p>
+                    <ul>
+                        <li>Machine Learning & Deep Learning</li>
+                        <li>Big Data technologies (Hadoop, Spark)</li>
+                        <li>Statistical modelling & predictive analytics</li>
+                        <li>Data engineering & ETL pipelines</li>
+                        <li>AI ethics & responsible data science</li>
+                        <li>Capstone project with real-world datasets</li>
+                    </ul>
+                </div>
+            </div>
+
+            <a href="index.html" class="back-home" data-aos="fade-up" data-aos-delay="700">
+                ← Back to Home
+            </a>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
